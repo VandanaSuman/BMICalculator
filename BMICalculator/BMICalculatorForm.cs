@@ -16,5 +16,13 @@ namespace BMICalculator
         {
             InitializeComponent();
         }
+
+        private void CalculateBMIButton_Click(object sender, EventArgs e)
+        {
+            //if(ImperialRadioButton.)
+            //{
+
+            //}
+        }
     }
 }
