@@ -41,7 +41,9 @@
             this.HeightTextBox = new System.Windows.Forms.TextBox();
             this.BMITextBox = new System.Windows.Forms.TextBox();
             this.CalculateBMIButton = new System.Windows.Forms.Button();
+            this.UnitsGroupBox = new System.Windows.Forms.GroupBox();
             this.BMICalculatorTableLayoutPanel1.SuspendLayout();
+            this.UnitsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BMICalculatorTableLayoutPanel1
@@ -51,10 +53,9 @@
             this.BMICalculatorTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.ResetButton, 1, 5);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.WeightTextBox, 1, 4);
-            this.BMICalculatorTableLayoutPanel1.Controls.Add(this.MetricRadioButton, 1, 2);
+            this.BMICalculatorTableLayoutPanel1.Controls.Add(this.UnitsGroupBox, 1, 1);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.BMICalculatorLabel, 0, 0);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.UnitsLabel, 0, 1);
-            this.BMICalculatorTableLayoutPanel1.Controls.Add(this.ImperialRadioButton, 1, 1);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.ResultLabel, 0, 6);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.WeightLabel, 0, 4);
             this.BMICalculatorTableLayoutPanel1.Controls.Add(this.HeightLabel, 0, 3);
@@ -98,11 +99,10 @@
             // MetricRadioButton
             // 
             this.MetricRadioButton.AutoSize = true;
-            this.MetricRadioButton.Location = new System.Drawing.Point(126, 113);
+            this.MetricRadioButton.Location = new System.Drawing.Point(0, 53);
             this.MetricRadioButton.Name = "MetricRadioButton";
             this.MetricRadioButton.Size = new System.Drawing.Size(106, 35);
             this.MetricRadioButton.TabIndex = 7;
-            this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -139,11 +139,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ImperialRadioButton.AutoSize = true;
             this.ImperialRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.ImperialRadioButton.Location = new System.Drawing.Point(126, 74);
+            this.ImperialRadioButton.Location = new System.Drawing.Point(0, 19);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
             this.ImperialRadioButton.Size = new System.Drawing.Size(118, 33);
             this.ImperialRadioButton.TabIndex = 6;
-            this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -196,12 +195,13 @@
             // BMITextBox
             // 
             this.BMITextBox.BackColor = System.Drawing.Color.LightGray;
+            this.BMITextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.BMITextBox.ForeColor = System.Drawing.Color.Black;
             this.BMITextBox.Location = new System.Drawing.Point(126, 333);
             this.BMITextBox.Multiline = true;
             this.BMITextBox.Name = "BMITextBox";
             this.BMITextBox.ReadOnly = true;
-            this.BMITextBox.Size = new System.Drawing.Size(118, 38);
+            this.BMITextBox.Size = new System.Drawing.Size(118, 54);
             this.BMITextBox.TabIndex = 10;
             // 
             // CalculateBMIButton
@@ -219,11 +219,22 @@
             this.CalculateBMIButton.UseVisualStyleBackColor = false;
             this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateBMIButton_Click);
             // 
+            // UnitsGroupBox
+            // 
+            this.UnitsGroupBox.Controls.Add(this.MetricRadioButton);
+            this.UnitsGroupBox.Controls.Add(this.ImperialRadioButton);
+            this.UnitsGroupBox.Location = new System.Drawing.Point(126, 58);
+            this.UnitsGroupBox.Name = "UnitsGroupBox";
+            this.BMICalculatorTableLayoutPanel1.SetRowSpan(this.UnitsGroupBox, 2);
+            this.UnitsGroupBox.Size = new System.Drawing.Size(118, 94);
+            this.UnitsGroupBox.TabIndex = 1;
+            this.UnitsGroupBox.TabStop = false;
+            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 441);
+            this.ClientSize = new System.Drawing.Size(304, 442);
             this.Controls.Add(this.BMICalculatorTableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -234,6 +245,8 @@
             this.Text = "BMI Calculator";
             this.BMICalculatorTableLayoutPanel1.ResumeLayout(false);
             this.BMICalculatorTableLayoutPanel1.PerformLayout();
+            this.UnitsGroupBox.ResumeLayout(false);
+            this.UnitsGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -253,6 +266,7 @@
         private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.TextBox BMITextBox;
         private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.GroupBox UnitsGroupBox;
     }
 }
 
